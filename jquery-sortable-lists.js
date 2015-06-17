@@ -35,8 +35,8 @@
 				baseClass: '',
 				baseCss: {
 					'position': 'absolute',
-					'top': 0 - parseInt(jQBody.css('margin-top')),
-					'left': 0 - parseInt(jQBody.css('margin-left')),
+					'top': 0 - parseInt(jQBody.css('margin-top'), 10),
+					'left': 0 - parseInt(jQBody.css('margin-left'), 10),
 					'margin': 0,
 					'padding': 0,
 					'z-index': 2500
@@ -176,10 +176,10 @@
 		{
 			state.isDragged = true;
 
-			var elMT = parseInt(el.css('margin-top')), // parseInt is necesary cause value has px at the end
-				elMB = parseInt(el.css('margin-bottom')),
-				elML = parseInt(el.css('margin-left')),
-				elMR = parseInt(el.css('margin-right')),
+			var elMT = parseInt(el.css('margin-top'), 10), // parseInt is necesary cause value has px at the end
+				elMB = parseInt(el.css('margin-bottom'), 10),
+				elML = parseInt(el.css('margin-left'), 10),
+				elMR = parseInt(el.css('margin-right'), 10),
 				elXY = el.offset(),
 				elIH = el.innerHeight();
 
